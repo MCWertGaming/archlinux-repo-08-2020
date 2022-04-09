@@ -1,0 +1,7 @@
+FROM archlinux/archlinux:base
+
+COPY chroot-builder.sh /entrypoint.sh
+COPY pacman-conf.d-noextract.conf /pacman-conf.d-noextract.conf
+COPY exclude /exclude
+
+ENTRYPOINT ["/entrypoint.sh"]
